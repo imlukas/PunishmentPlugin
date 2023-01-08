@@ -5,18 +5,12 @@ import me.imlukas.punishmentplugin.data.player.PlayerData;
 import me.imlukas.punishmentplugin.data.player.PlayerDataHandler;
 import me.imlukas.punishmentplugin.data.punishment.Punishment;
 import me.imlukas.punishmentplugin.data.punishment.PunishmentDataHandler;
-import me.imlukas.punishmentplugin.utils.command.SimpleCommand;
 import me.imlukas.punishmentplugin.utils.storage.MessagesFile;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class PunishmentPunishCommand implements CommandExecutor {
 

@@ -3,7 +3,6 @@ package me.imlukas.punishmentplugin.commands;
 import me.imlukas.punishmentplugin.PunishmentPlugin;
 import me.imlukas.punishmentplugin.data.player.PlayerData;
 import me.imlukas.punishmentplugin.data.player.PlayerDataHandler;
-import me.imlukas.punishmentplugin.data.punishment.Punishment;
 import me.imlukas.punishmentplugin.data.punishment.PunishmentDataHandler;
 import me.imlukas.punishmentplugin.utils.storage.MessagesFile;
 import org.bukkit.Bukkit;
