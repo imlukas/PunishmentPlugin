@@ -1,0 +1,19 @@
+name: PunishmentPlugin
+version: '${version}'
+main: me.imlukas.punishmentplugin.PunishmentPlugin
+commands:
+  punish:
+    aliases: pun
+    description: Punish a player
+    usage: /punish <player> <punishment> [reason]
+    permission: punishmentplugin.punish
+  reset:
+    aliases: res
+    description: Reset a player's punishments
+    usage: /reset <player>
+    permission: punishmentplugin.reset
+  data:
+    aliases: punishementdata
+    description: View a player's punishments
+    usage: /data <player>
+    permission: punishmentplugin.data

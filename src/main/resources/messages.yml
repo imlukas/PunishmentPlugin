@@ -1,0 +1,15 @@
+messages:
+  use-prefix: true # NOTE: this does not disable %prefix% -- Messages in a list of messages will not have prefix by default. You need to use the %prefix%.
+  prefix: "&c[PunishmentPlugin]" # prefix to appear besides the messages, use %prefix% to force a prefix onto a message
+  arrow: "->" # arrow to appear before the messages [PunishmentPlugin] >> This is a message
+
+  command:
+    invalid-args: '&cInvalid arguments!'
+  punishment:
+    not-found: '&cPunishment not found!'
+    reset: '&aPunishments reset!'
+    player-not-found: '&cPlayer not found!'
+    data:
+      header: '&7Punishments for &e%player%'
+      entry: '&7%punishment% &e- &7%warnings% &cwarnings.'
+      footer: '&7End of punishments for &e%player%'

@@ -1,0 +1,18 @@
+punishments:
+
+  # Time: -1 to ignore time. (kick)
+  # Format Valid units: (s)econds, (m)inutes, (h)ours, (d)ays, (w)eeks, (mo)nths, years.
+  # Type valid: ban, mute, warn, and kick
+  racism:
+    1:
+      time: 30
+      format: minutes
+      type: mute
+    2:
+      time: 2
+      format: hours
+      type: mute
+    3:
+      time: 3
+      format: hours
+      type: mute
