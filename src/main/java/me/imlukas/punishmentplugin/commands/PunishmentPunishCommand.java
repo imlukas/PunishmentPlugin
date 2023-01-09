@@ -43,11 +43,11 @@ public class PunishmentPunishCommand implements CommandExecutor {
         String targetName = target.getName() + " ";
         String punishmentName = args[1];
 
-
         if (punishmentDataHandler.getPunishment(args[1]) == null) {
             messages.sendMessage(sender, "punishment.not-found");
             return true;
         }
+        
         String reason = "No reason specified";
         if (args.length > 2) {
             reason = args[2];
@@ -63,10 +63,6 @@ public class PunishmentPunishCommand implements CommandExecutor {
         int time = punishment.getTime(warning);
         String format = punishment.getFormat(warning) + " ";
 
-        if (warning + 2 > punishment.getMaxWarnings()) {
-            playerDataHandler.resetPlayer(target.getUniqueId());
-        }
-
         if (time == -1 || type.equalsIgnoreCase("kick") || type.equalsIgnoreCase("warn")) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), type + targetName + reason);
             return true;
@@ -74,7 +70,10 @@ public class PunishmentPunishCommand implements CommandExecutor {
 
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), type + targetName + time + format + reason);
 
-        playerData.setWarning(punishmentName, warning + 1);
+        if (warning < 3 ) {
+            playerData.setWarning(punishmentName, warning + 1);
+        }
+
         sender.sendMessage("Target has been punished!");
         return true;
     }
