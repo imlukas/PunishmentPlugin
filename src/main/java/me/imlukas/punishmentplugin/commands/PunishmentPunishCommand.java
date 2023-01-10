@@ -57,8 +57,8 @@ public class PunishmentPunishCommand implements CommandExecutor {
 
         PlayerData playerData = playerDataHandler.getPlayerData(target);
 
-        int warning = playerData.getWarning(punishmentName);
 
+        int warning = playerData.getWarning(punishmentName);
         String type = punishment.getType(warning) + " ";
         int time = punishment.getTime(warning);
         String format = punishment.getFormat(warning) + " ";
@@ -70,7 +70,7 @@ public class PunishmentPunishCommand implements CommandExecutor {
 
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), type + targetName + time + format + reason);
 
-        if (warning < 3 ) {
+        if (warning < 2) {
             playerData.setWarning(punishmentName, warning + 1);
         }
 
